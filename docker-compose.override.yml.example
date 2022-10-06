@@ -2,7 +2,7 @@
 version: "3.7"
 services:
   nautobot:
-    image: "paulboot/nautobot-plugins:latest"
+    image: "paulboot/nautobot-plugins:1.4.3"
     build:
       context: "."
       dockerfile: "Dockerfile-Plugins"
@@ -15,7 +15,7 @@ services:
       - "8080:8080"
     restart: "unless-stopped"
   nautobot-worker:
-    image: "paulboot/nautobot-plugins:latest"
+    image: "paulboot/nautobot-plugins:1.4.3"
     build:
       context: "."
       dockerfile: "Dockerfile-Plugins"
@@ -25,7 +25,7 @@ services:
       - "local.env"
     restart: "unless-stopped"
   celery_worker:
-    image: "paulboot/nautobot-plugins:latest"
+    image: "paulboot/nautobot-plugins:1.4.3"
     build:
       context: "."
       dockerfile: "Dockerfile-Plugins"
